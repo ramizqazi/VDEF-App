@@ -81,7 +81,7 @@ const App = () => {
 const renderItem = ({item, index}) => {
   if (index === 0) {
     return (
-      <View style={styles.itemContainer}>
+      <View style={[styles.itemContainer, {paddingBottom: 80}]}>
         {item.icon}
         <Text style={[styles.itemTxt, styles.itemTxtRegular, styles.itemTxtxl]}>
           {item.boldText}{' '}
@@ -154,15 +154,14 @@ const styles = StyleSheet.create({
   },
   carouselContainer: {
     flex: 1,
-    marginTop: 50,
   },
   itemContainer: {
-    height: '100%',
     rowGap: 30,
-    paddingTop: 40,
+    marginTop: 20,
+    height: '100%',
     alignItems: 'center',
     paddingHorizontal: 20,
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
   },
   itemTxt: {
     color: '#fff',
@@ -192,7 +191,6 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     height: 230,
-    marginBottom: 20,
   },
   titleTxt: {
     fontSize: 27,
